@@ -13,6 +13,10 @@
 #include "app_hal.h"
 
 #include "demos/lv_demos.h"
+#include "ui/ui.h"
+#include "ui/screens.h"
+
+char* native_string = "Backend String";
 
 #ifdef ARDUINO
 #include <Arduino.h>
@@ -35,7 +39,10 @@ int main(void)
 
 	hal_setup();
 
-  lv_demo_widgets();
+  // lv_demo_widgets()
+  ui_init();
+
+  
 
 	hal_loop();
 }

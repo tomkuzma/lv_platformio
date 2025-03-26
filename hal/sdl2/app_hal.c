@@ -4,6 +4,7 @@
 #include "drivers/sdl/lv_sdl_mouse.h"
 #include "drivers/sdl/lv_sdl_mousewheel.h"
 #include "drivers/sdl/lv_sdl_keyboard.h"
+#include "ui/ui.h"
 
 
 
@@ -54,5 +55,6 @@ void hal_loop(void)
         lv_tick_inc(current - lastTick); // Update the tick timer. Tick is new for LVGL 9
         lastTick = current;
         lv_timer_handler(); // Update the UI-
+        ui_tick();
     }
 }
